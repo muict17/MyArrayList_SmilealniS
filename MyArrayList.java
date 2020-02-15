@@ -2,10 +2,11 @@ public class MyArrayList
 {
 	public static String[] Array;
 	public static int length = 0;
+	public int size = 1000;
 	
 	MyArrayList()
 	{
-		Array = new String[1000];
+		Array = new String[size];
 		length = 0;
 	}
 	
@@ -13,6 +14,7 @@ public class MyArrayList
 	{
 		Array[length] = input;
 		length++;
+		size++;
 	}
 	
 	public void remove(int index)
@@ -23,6 +25,7 @@ public class MyArrayList
 		}
 		
 		length--;
+		size--;
 	}
 	
 	public String get(int index)
